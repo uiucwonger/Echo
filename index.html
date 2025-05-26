@@ -48,19 +48,29 @@
             margin-bottom: 1em;
             font-size: 1.3em;
         }
-        ul {
+        ul.faq-list {
             list-style: none;
             padding: 0;
         }
-        li {
+        ul.faq-list li {
             margin-bottom: 1.3em;
             background: #f3f4f6;
             border-radius: 8px;
             padding: 1em 1em 0.7em 1em;
             box-shadow: 0 1px 3px rgba(252,76,2,0.03);
         }
-        li strong {
+        .faq-question {
             color: #fc4c02;
+            font-weight: bold;
+            font-size: 1em;
+            display: block;
+            margin-bottom: 0.3em;
+        }
+        .faq-answer {
+            font-size: 0.90em;
+            color: #222;
+            margin-left: 0;
+            margin-bottom: 0;
         }
         a {
             color: #fc4c02;
@@ -69,7 +79,7 @@
         a:hover {
             text-decoration: underline;
         }
-        /* Center the contact box with a wrapper */
+        /* Contact box styles */
         .contact-wrapper {
             text-align: center;
             margin-top: 2.5em;
@@ -77,25 +87,27 @@
         .contact {
             display: inline-block;
             background: #f9f2ee;
-            border-radius: 8px;
-            padding: 1em 2em 0.7em 2em;
+            border-radius: 10px;
+            padding: 1.2em 2.5em 1.1em 2.5em;
             box-shadow: 0 1px 4px rgba(252,76,2,0.06);
-            min-width: 220px;
+            min-width: 0;
         }
         .contact-title {
             margin: 0 0 0.5em 0;
-            font-size: 1.25em;
+            font-size: 1.18em;
             font-weight: 600;
             color: #333;
+            text-align: center;
         }
         .contact-text {
             margin: 0;
-            font-size: 1.08em;
+            font-size: 1.05em;
+            text-align: center;
         }
         .contact-email {
             color: #fc4c02;
-            font-weight: 500;
-            word-break: break-all;
+            font-weight: bold;
+            font-family: inherit;
         }
         .strava-connect-img {
             display: block;
@@ -123,8 +135,7 @@
                 width: 120px;
             }
             .contact {
-                padding: 0.7em 1em 0.5em 1em;
-                min-width: 0;
+                padding: 1em 1em 1em 1em;
             }
         }
     </style>
@@ -137,18 +148,18 @@
             Welcome! This page provides help and answers for using Echo Uploader to connect your Rogue Echo Rower workouts to Strava.
         </p>
         <h2>Frequently Asked Questions</h2>
-        <ul>
+        <ul class="faq-list">
             <li>
-                <strong>How do I connect my Strava account?</strong><br>
-                Open the app and follow the on-screen instructions to log in with your Strava account.
+                <span class="faq-question">How do I connect my Strava account?</span>
+                <span class="faq-answer">Open the app and follow the on-screen instructions to log in with your Strava account.</span>
             </li>
             <li>
-                <strong>Having trouble authenticating?</strong><br>
-                Make sure you have a stable internet connection and are using the latest version of the app.
+                <span class="faq-question">Having trouble authenticating?</span>
+                <span class="faq-answer">Make sure you have a stable internet connection and are using the latest version of the app.</span>
             </li>
             <li>
-                <strong>Why are my activities showing up as a Run in Strava?</strong><br>
-                Strava defaults to "Run" when the sport type in your uploaded TCX file isn't recognized. You can manually change the activity type on Strava after upload, or use a companion service like <a href="https://www.activityfix.com/index" target="_blank">ActivityFix</a> to automatically correct it.
+                <span class="faq-question">Why are my activities showing up as a Run in Strava?</span>
+                <span class="faq-answer">Strava defaults to "Run" when the sport type in your uploaded TCX file isn't recognized. You can manually change the activity type on Strava after upload, or use a companion service like <a href="https://www.activityfix.com/index" target="_blank">ActivityFix</a> to automatically correct it.</span>
             </li>
         </ul>
         <div class="contact-wrapper">
